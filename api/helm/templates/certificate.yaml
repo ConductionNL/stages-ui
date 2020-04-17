@@ -17,7 +17,6 @@ spec:
   {{- else }}      
   - {{ $.Values.settings.subdomain }}.{{ $.Values.settings.env }}.{{ $.Values.settings.domain }}    
   {{- end }}
-{{- end }}
   issuerRef:
     name: {{ include "name" . }}-{{ .Values.settings.env }}-letsencrypt
     kind: ClusterIssuer
